@@ -31,7 +31,7 @@ setTimeout(function() {
 setTimeout(function() {
     for(let i = 0; i<5; i++){
         let x = Number(prompt("Enter the correct numbers"));
-        if(random.includes(x)){
+        if(random.includes(x) && correct.includes(x)===false){
             correct.push(x);
             count++;
         }else{
@@ -39,5 +39,5 @@ setTimeout(function() {
         }
 
     }
-    alert("You have identified " + count + " numbers: \n" + correct + "\n\n\nWrong numbers entered: \n" + wrong);
+    alert("You have identified " + count + " numbers: \n" + correct + "\n\n\nWrong or Repeated numbers entered: \n" + wrong);
 }, 30500);
